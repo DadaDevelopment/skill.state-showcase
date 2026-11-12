@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Poster: does structured state replace conversation history in a coding agent? Terminal-Bench 2.0, 1044 runs.">
+<title>Skill.State: постер</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="poster.css">
+<script type="module" src="poster.js"></script>
+</head>
+<body class="poster-page">
+<div class="screen-bar">
+  <a href="./" id="back-link" data-i18n="interactiveNav"></a>
+  <a href="skill-state-poster-ru.pdf" id="pdf-link" data-i18n="pPdf"></a>
+  <button type="button" id="print" data-i18n="pPrint"></button>
+  <span class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </span>
+</div>
+<div class="stage" id="stage">
+  <main class="sheet" id="sheet">
+    <header class="p-head">
+      <div class="p-title">
+        <h1 data-i18n="title"></h1>
+        <p class="p-sub" data-i18n="posterSub"></p>
+        <p class="p-author"><span data-i18n="posterAuthor"></span></p>
+      </div>
+      <a class="p-qr" href="https://dadadevelopment.github.io/skill.state-showcase/">
+        <img src="assets/qr.svg" alt="QR code" width="124" height="124">
+        <span data-i18n="posterScan"></span>
+        <span class="url">dadadevelopment.github.io/skill.state-showcase</span>
+      </a>
+    </header>
+
+    <dl class="p-keys">
+      <div><dt data-i18n="keyPeak"></dt><dd id="p-key-peak"></dd></div>
+      <div><dt data-i18n="keyCost"></dt><dd id="p-key-cost"></dd></div>
+      <div><dt data-i18n="keySolve"></dt><dd id="p-key-solve"></dd></div>
+      <div><dt data-i18n="keyRecover"></dt><dd id="p-key-recover"></dd></div>
+    </dl>
+
+    <div class="p-body">
+      <section class="col col-a">
+        <h2 data-i18n="pQuestion"></h2>
+        <p data-i18n="pQuestionP1"></p>
+        <p data-i18n="pQuestionP2"></p>
+        <h3 data-i18n="pDiagram"></h3>
+        <div id="diagram"></div>
+        <h3 data-i18n="pFacts"></h3>
+        <dl class="facts" id="facts"></dl>
+      </section>
+
+      <section class="col col-b">
+        <h2 data-i18n="pResults"></h2>
+        <h3 data-i18n="chartRate"></h3>
+        <div id="p-chart-rate"></div>
+        <h3 data-i18n="pRatioCap"></h3>
+        <div id="p-chart-ratio"></div>
+      </section>
+
+      <section class="col col-c">
+        <h2 data-i18n="pMechanism"></h2>
+        <div id="p-chart-parts"></div>
+        <h2 class="warn-h" data-i18n="pLimits"></h2>
+        <div id="p-chart-stop"></div>
+        <ul class="p-limits" id="p-limits"></ul>
+      </section>
+    </div>
+
+    <section class="p-take">
+      <h2 data-i18n="pTakeaways"></h2>
+      <ol id="takeaways"></ol>
+    </section>
+
+    <footer class="p-foot">
+      <span data-i18n="pRef"></span>
+      <span id="p-foot-data"></span>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

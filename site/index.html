@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Skill.State on Terminal-Bench 2.0: interactive results of 1044 runs, solve rate and cache-aware cost.">
+<title>Skill.State на Terminal-Bench</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip"></a>
+<header class="top">
+  <span class="brand" data-i18n="brand"></span>
+  <nav aria-label="Links">
+    <a href="poster.html" data-i18n="posterNav"></a>
+    <a href="https://github.com/DadaDevelopment/skill.state-paper/blob/main/paper-ru/main.pdf" data-i18n="paperRu"></a>
+    <a href="https://github.com/DadaDevelopment/skill.state-paper/blob/main/paper/main.pdf" data-i18n="paperEn"></a>
+    <a id="repo-link" href="https://github.com/DadaDevelopment/skill.state-paper" data-i18n="repo"></a>
+    <span class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <h1 data-i18n="title"></h1>
+    <p class="subtitle" data-i18n="subtitle"></p>
+    <dl class="keys">
+      <div><dt data-i18n="keyPeak"></dt><dd id="key-peak"></dd><dd class="note" data-i18n="keyPeakNote"></dd></div>
+      <div><dt data-i18n="keyCost"></dt><dd id="key-cost"></dd><dd class="note" data-i18n="keyCostNote"></dd></div>
+      <div><dt data-i18n="keySolve"></dt><dd id="key-solve"></dd><dd class="note" data-i18n="keySolveNote"></dd></div>
+      <div><dt data-i18n="keyRecover"></dt><dd id="key-recover"></dd><dd class="note"><span data-i18n="keyRecoverNote"></span> <span id="key-recover-p"></span></dd></div>
+    </dl>
+    <p class="caveat" role="note"><span id="caveat-text"></span> <a href="#limits-section" data-i18n="caveatLink"></a></p>
+  </section>
+  <p id="fatal" class="fatal" role="alert" hidden></p>
+
+  <div class="toolbar" role="group" aria-label="Filters">
+    <label><span data-i18n="toolbarTrial"></span><select id="trial"></select></label>
+    <label><span data-i18n="toolbarHorizon"></span><select id="horizon"></select></label>
+    <button type="button" id="reset" data-i18n="reset"></button>
+    <span id="horizon-note" class="note"></span>
+  </div>
+
+  <section aria-labelledby="h-table">
+    <h2 id="h-table" data-i18n="secTable"></h2>
+    <p class="hint" data-i18n="secTableHint"></p>
+    <div class="scroll" tabindex="0"><div id="table"></div></div>
+  </section>
+
+  <section aria-labelledby="h-charts">
+    <h2 id="h-charts" data-i18n="secCharts"></h2>
+    <div class="charts">
+      <figure><figcaption data-i18n="chartRate"></figcaption><div id="chart-rate"></div></figure>
+      <figure><figcaption data-i18n="chartStop"></figcaption><p class="hint" data-i18n="chartStopHint"></p><div id="chart-stop"></div></figure>
+      <figure class="wide"><figcaption data-i18n="chartRatio"></figcaption><p class="hint" data-i18n="chartRatioHint"></p><div id="chart-ratio"></div></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-heat">
+    <h2 id="h-heat" data-i18n="secHeat"></h2>
+    <p class="hint" data-i18n="secHeatHint"></p>
+    <div class="toolbar plain"><label><span data-i18n="sortLabel"></span><select id="sort"></select></label></div>
+    <div class="scroll heat-wrap" tabindex="0"><div id="heatmap"></div></div>
+  </section>
+
+  <section aria-labelledby="h-vaxis">
+    <h2 id="h-vaxis" data-i18n="secVaxis"></h2>
+    <p class="hint" data-i18n="secVaxisHint"></p>
+    <div class="scroll" tabindex="0"><div id="vaxis"></div></div>
+  </section>
+
+  <section id="limits-section" aria-labelledby="h-limits">
+    <h2 id="h-limits" data-i18n="secLimits"></h2>
+    <ul id="limits" class="limits"></ul>
+  </section>
+</main>
+<footer>
+  <span id="footer-data"></span>
+  <span data-i18n="footerCredit"></span>
+</footer>
+<noscript>This page needs JavaScript. The data and the paper are in the repository.</noscript>
+</body>
+</html>
